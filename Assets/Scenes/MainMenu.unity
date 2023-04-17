@@ -222,7 +222,8 @@ PrefabInstance:
       propertyPath: m_text
       value: Continue
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7590233475385818248, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
 --- !u!224 &110295235 stripped
 RectTransform:
@@ -586,7 +587,8 @@ PrefabInstance:
       propertyPath: m_text
       value: Load Game
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7590233475385818248, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
 --- !u!224 &652485938 stripped
 RectTransform:
@@ -1318,7 +1320,8 @@ PrefabInstance:
       propertyPath: m_text
       value: New Game
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7590233475385818248, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
 --- !u!224 &2015652714 stripped
 RectTransform:
