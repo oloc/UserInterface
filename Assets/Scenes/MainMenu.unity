@@ -1416,6 +1416,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7590233475385818253, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590233475385818253, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590233475385818253, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2075517007}
+    - target: {fileID: 7590233475385818253, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590233475385818253, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ButtonPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590233475385818253, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SettingsButtonController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590233475385818253, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7590233475385818255, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
       propertyPath: m_Name
       value: Button Settings
@@ -1424,13 +1452,32 @@ PrefabInstance:
       propertyPath: m_text
       value: Settings
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7590233475385818248, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
 --- !u!224 &2075517005 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7590233475385818252, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
   m_PrefabInstance: {fileID: 2075517004}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2075517006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7590233475385818255, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
+  m_PrefabInstance: {fileID: 2075517004}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2075517007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075517006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c122be8dacb1bc42a6b818ccf893e9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _settingsScene: Settings
 --- !u!1001 &2097127334
 PrefabInstance:
   m_ObjectHideFlags: 0
