@@ -6,19 +6,14 @@ public class PlayButtonController : MonoBehaviour
     [SerializeField]
     private CanvasGroup _canvasGroupToActivate;
 
-    private bool _isActivated;
+    private void Awake()
+    {
+        _canvasGroupToActivate.interactable = false;
+    }
 
     public void onClick()
     {
-        if (_isActivated)
-        {
-            _canvasGroupToActivate.alpha = 0;
-            _isActivated = false;
-        }
-        else
-        {
-            _canvasGroupToActivate.alpha = 1;
-            _isActivated = true;
-        }
+        _canvasGroupToActivate.interactable = !_canvasGroupToActivate.interactable;
+        _canvasGroupToActivate.alpha = _canvasGroupToActivate.interactable ? 1f : 0f;
     }
 }
