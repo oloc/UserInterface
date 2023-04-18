@@ -20,7 +20,6 @@ public class SettingsInit : MonoBehaviour
         {
             float playerPrefsVolume = PlayerPrefs.GetFloat(prefKey);
             _audioMixer.SetFloat(volumeParam, Mathf.Log10(playerPrefsVolume) * 20);
-            Debug.Log(playerPrefsVolume.ToString());
         }
     }
 }
