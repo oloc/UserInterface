@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SettingsController : MonoBehaviour
+public class MenuSettingsController : MonoBehaviour
 {
     [SerializeField]
     private string _previousScene;
