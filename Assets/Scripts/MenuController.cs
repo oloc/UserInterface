@@ -1,18 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private string _settingsScene;
+    [SerializeField]
+    private CanvasGroup _canvasGroupToActivate;
+
+    private void Awake()
     {
-        
+        _canvasGroupToActivate.interactable = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayButtonPressed()
     {
-        
+        _canvasGroupToActivate.interactable = !_canvasGroupToActivate.interactable;
+        _canvasGroupToActivate.alpha = _canvasGroupToActivate.interactable ? 1f : 0f;
+    }
+
+    public void SettingsButtonPressed()
+    {
+        SceneManager.LoadScene(_settingsScene);
+    }
+
+    public void QuitButtonPressed()
+    {
+        Application.Quit();
     }
 }
