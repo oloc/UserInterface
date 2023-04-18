@@ -1497,6 +1497,26 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4763505133106017704, guid: 1a32149188cc55440a1978bbca9d32a7, type: 3}
+      propertyPath: m_MinValue
+      value: 0.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763505133106017704, guid: 1a32149188cc55440a1978bbca9d32a7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763505133106017704, guid: 1a32149188cc55440a1978bbca9d32a7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1188281276608795962}
+    - target: {fileID: 4763505133106017704, guid: 1a32149188cc55440a1978bbca9d32a7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetMainVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763505133106017704, guid: 1a32149188cc55440a1978bbca9d32a7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameSettingsController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4763505133106017710, guid: 1a32149188cc55440a1978bbca9d32a7, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -6108,6 +6128,7 @@ GameObject:
   - component: {fileID: 1188281276608795961}
   - component: {fileID: 1188281276608795911}
   - component: {fileID: 1188281276608795910}
+  - component: {fileID: 1188281276608795962}
   m_Layer: 5
   m_Name: Settings Game
   m_TagString: Untagged
@@ -6138,6 +6159,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1188281276608795962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188281276608795960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24ca5839c625dd14cbccd06f01d14ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioMixer: {fileID: 24100000, guid: 8dc62c31ba13e4f4abe9449b34ea3012, type: 2}
 --- !u!1 &1326766740561470637
 GameObject:
   m_ObjectHideFlags: 0
