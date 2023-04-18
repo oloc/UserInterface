@@ -1143,6 +1143,18 @@ PrefabInstance:
       propertyPath: m_Value
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4763505133106017704, guid: 1a32149188cc55440a1978bbca9d32a7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1188281276608795962}
+    - target: {fileID: 4763505133106017704, guid: 1a32149188cc55440a1978bbca9d32a7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetDialogSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763505133106017704, guid: 1a32149188cc55440a1978bbca9d32a7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameSettingsController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4763505133106017710, guid: 1a32149188cc55440a1978bbca9d32a7, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5028,6 +5040,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7590233475385818253, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590233475385818253, guid: cbd1c32e142b2dc47b9d3be728d1dd1d, type: 3}
       propertyPath: m_SpriteState.m_DisabledSprite
       value: 
       objectReference: {fileID: 21300000, guid: 05ef55e5084e1f04fbbefcb2f40b5efd, type: 3}
@@ -6310,9 +6326,9 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1326766740561470640}
-        m_TargetAssemblyTypeName: ToggleController, Assembly-CSharp
-        m_MethodName: onValueChanged
+      - m_Target: {fileID: 1188281276608795962}
+        m_TargetAssemblyTypeName: GameSettingsController, Assembly-CSharp
+        m_MethodName: SetToolTips
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

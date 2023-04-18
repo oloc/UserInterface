@@ -10,6 +10,11 @@ public class GameSettingsController : MonoBehaviour
     private const string MUSICVOLUME_PARAM = "MusicVolume";
     private const string SFXVOLUME_PARAM = "SFXVolume";
 
+    public void SetDialogSpeed(float dialogSpeed)
+    {
+        // Nothing yet
+    }
+
     public void SetMainVolume(float volume)
     {
         _audioMixer.SetFloat(MAINVOLUME_PARAM, Mathf.Log10(volume) * 20);
@@ -23,5 +28,10 @@ public class GameSettingsController : MonoBehaviour
     public void SetSFXVolume(float volume)
     {
         _audioMixer.SetFloat(SFXVOLUME_PARAM, Mathf.Log10(volume) * 20);
+    }
+
+    public void SetToolTips(bool toggle)
+    {
+        // Nothing yet
     }
 }
