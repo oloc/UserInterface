@@ -12,6 +12,8 @@ public class GameSettingsController : MonoBehaviour
     private Slider _musicVolumeSlider;
     [SerializeField]
     private Slider _sfxVolumeSlider;
+    [SerializeField]
+    private Slider _dialogSpeed;
 
     // Exposed mixer parameters
     public const string MAINVOLUME_PARAM = "MainVolume";
@@ -23,15 +25,18 @@ public class GameSettingsController : MonoBehaviour
     public const string PLAYERPREFS_MUSICVOLUME = "Sound:MusicVolume";
     public const string PLAYERPREFS_SFXVOLUME = "Sound:SFXVolume";
 
+    private const string PLAYERPREFS_DIALOGSPEED = "Dialog:Speed";
+
 
     private void Start()
     {
-        SlideVolume(_mainVolumeSlider, PLAYERPREFS_MAINVOLUME);
-        SlideVolume(_musicVolumeSlider, PLAYERPREFS_MUSICVOLUME);
-        SlideVolume(_sfxVolumeSlider, PLAYERPREFS_SFXVOLUME);
+        SetSlider(_mainVolumeSlider, PLAYERPREFS_MAINVOLUME);
+        SetSlider(_musicVolumeSlider, PLAYERPREFS_MUSICVOLUME);
+        SetSlider(_sfxVolumeSlider, PLAYERPREFS_SFXVOLUME);
+        SetSlider(_dialogSpeed, PLAYERPREFS_DIALOGSPEED);
     }
 
-    private void SlideVolume(Slider slider, string key)
+    private void SetSlider(Slider slider, string key)
     {
         if (PlayerPrefs.HasKey(key))
         {
@@ -42,7 +47,8 @@ public class GameSettingsController : MonoBehaviour
 
     public void SetDialogSpeed(float dialogSpeed)
     {
-        // Nothing yet
+        PlayerPrefs.SetFloat(PLAYERPREFS_DIALOGSPEED, dialogSpeed);
+        PlayerPrefs.Save();
     }
 
     public void SetMainVolume(float volume)

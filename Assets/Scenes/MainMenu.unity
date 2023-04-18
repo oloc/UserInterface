@@ -543,7 +543,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _settingsScene: Settings
   _canvasGroupToActivate: {fileID: 1832528917}
-  _gameSettingsController: {fileID: 0}
 --- !u!1001 &652485937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1098,7 +1097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5060aeb4bd1c4449b9f6a0caef60d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioMixer: {fileID: 0}
+  _audioMixer: {fileID: 24100000, guid: 8dc62c31ba13e4f4abe9449b34ea3012, type: 2}
 --- !u!1 &1648234714
 GameObject:
   m_ObjectHideFlags: 0
