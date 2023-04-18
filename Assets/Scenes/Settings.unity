@@ -1273,6 +1273,18 @@ PrefabInstance:
       propertyPath: m_MinValue
       value: 0.000001
       objectReference: {fileID: 0}
+    - target: {fileID: 4763505133106017704, guid: 1a32149188cc55440a1978bbca9d32a7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1188281276608795962}
+    - target: {fileID: 4763505133106017704, guid: 1a32149188cc55440a1978bbca9d32a7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSFXVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763505133106017704, guid: 1a32149188cc55440a1978bbca9d32a7, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameSettingsController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4763505133106017710, guid: 1a32149188cc55440a1978bbca9d32a7, type: 3}
       propertyPath: m_Pivot.x
       value: 0

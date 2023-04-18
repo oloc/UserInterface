@@ -8,6 +8,7 @@ public class GameSettingsController : MonoBehaviour
 
     private const string MAINVOLUME_PARAM = "MainVolume";
     private const string MUSICVOLUME_PARAM = "MusicVolume";
+    private const string SFXVOLUME_PARAM = "SFXVolume";
 
     public void SetMainVolume(float volume)
     {
@@ -19,4 +20,8 @@ public class GameSettingsController : MonoBehaviour
         _audioMixer.SetFloat(MUSICVOLUME_PARAM, Mathf.Log10(volume) * 20);
     }
 
+    public void SetSFXVolume(float volume)
+    {
+        _audioMixer.SetFloat(SFXVOLUME_PARAM, Mathf.Log10(volume) * 20);
+    }
 }
