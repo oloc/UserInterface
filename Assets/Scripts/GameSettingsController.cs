@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class GameSettingsController : MonoBehaviour
+public class GameSettingsController : SettingsController
 {
     [SerializeField]
     private AudioMixer _audioMixer;
@@ -34,61 +34,38 @@ public class GameSettingsController : MonoBehaviour
 
     private void Start()
     {
-        SetSlider(_mainVolumeSlider, PLAYERPREFS_MAINVOLUME);
-        SetSlider(_musicVolumeSlider, PLAYERPREFS_MUSICVOLUME);
-        SetSlider(_sfxVolumeSlider, PLAYERPREFS_SFXVOLUME);
-        SetSlider(_dialogSpeed, PLAYERPREFS_DIALOGSPEED);
-        SetToogle(_toolTips, PLAYERPREFS_TOOLTIPS);
-    }
-
-    private void SetSlider(Slider slider, string key)
-    {
-        if (PlayerPrefs.HasKey(key))
-        {
-            float playerPrefsVolume = PlayerPrefs.GetFloat(key);
-            slider.value = playerPrefsVolume;
-        }
+        SetSliderFromPrefs(_mainVolumeSlider, PLAYERPREFS_MAINVOLUME);
+        SetSliderFromPrefs(_musicVolumeSlider, PLAYERPREFS_MUSICVOLUME);
+        SetSliderFromPrefs(_sfxVolumeSlider, PLAYERPREFS_SFXVOLUME);
+        SetSliderFromPrefs(_dialogSpeed, PLAYERPREFS_DIALOGSPEED);
+        SetToggleFromPrefs(_toolTips, PLAYERPREFS_TOOLTIPS);
     }
 
     public void SetDialogSpeed(float dialogSpeed)
     {
-        PlayerPrefs.SetFloat(PLAYERPREFS_DIALOGSPEED, dialogSpeed);
-        PlayerPrefs.Save();
+        SaveFloatInPrefs(PLAYERPREFS_DIALOGSPEED, dialogSpeed);
     }
 
     public void SetMainVolume(float volume)
     {
         _audioMixer.SetFloat(MAINVOLUME_PARAM, Mathf.Log10(volume) * 20);
-        PlayerPrefs.SetFloat(PLAYERPREFS_MAINVOLUME, volume);
-        PlayerPrefs.Save();
+        SaveFloatInPrefs(PLAYERPREFS_MAINVOLUME, volume);
     }
 
     public void SetMusicVolume(float volume)
     {
         _audioMixer.SetFloat(MUSICVOLUME_PARAM, Mathf.Log10(volume) * 20);
-        PlayerPrefs.SetFloat(PLAYERPREFS_MUSICVOLUME, volume);
-        PlayerPrefs.Save();
+        SaveFloatInPrefs(PLAYERPREFS_MUSICVOLUME, volume);
     }
 
     public void SetSFXVolume(float volume)
     {
         _audioMixer.SetFloat(SFXVOLUME_PARAM, Mathf.Log10(volume) * 20);
-        PlayerPrefs.SetFloat(PLAYERPREFS_SFXVOLUME, volume);
-        PlayerPrefs.Save();
-    }
-
-    private void SetToogle(Toggle toogle, string key)
-    {
-        if (PlayerPrefs.HasKey(key))
-        {
-            int state = PlayerPrefs.GetInt(key);
-            toogle.isOn = state == 1;
-        }
+        SaveFloatInPrefs(PLAYERPREFS_SFXVOLUME, volume);
     }
 
     public void SetToolTips(bool toggle)
     {
-        PlayerPrefs.SetInt(PLAYERPREFS_TOOLTIPS, toggle ? 1 : 0);
-        PlayerPrefs.Save();
+        SaveToggleInPrefs(PLAYERPREFS_TOOLTIPS, toggle);
     }
 }
