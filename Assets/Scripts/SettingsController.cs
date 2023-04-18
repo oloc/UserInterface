@@ -46,7 +46,10 @@ public class SettingsController : MonoBehaviour
         foreach (StateStruct stateGameObject in _states)
         {
             stateGameObject.GameObject.SetActive(false);
+            stateGameObject.Button.interactable = true;
         }
+        GetStateButton(_currentState).interactable = false;
+        GetStateGameObject(_currentState).SetActive(true);
     }
 
     private GameObject GetStateGameObject(SettingsState state)
