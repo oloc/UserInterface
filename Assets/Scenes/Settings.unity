@@ -1133,6 +1133,7 @@ GameObject:
   - component: {fileID: 309471659}
   - component: {fileID: 309471661}
   - component: {fileID: 309471660}
+  - component: {fileID: 309471662}
   m_Layer: 5
   m_Name: Settings Controls
   m_TagString: Untagged
@@ -1201,6 +1202,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309471658}
   m_CullTransparentMesh: 1
+--- !u!114 &309471662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309471658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f344cf52ab8cd83489a6fc0bd7ba2424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _invertMouse: {fileID: 571184399}
 --- !u!1 &315880324
 GameObject:
   m_ObjectHideFlags: 0
@@ -2506,9 +2520,9 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 571184398}
-        m_TargetAssemblyTypeName: ToggleController, Assembly-CSharp
-        m_MethodName: onValueChanged
+      - m_Target: {fileID: 309471662}
+        m_TargetAssemblyTypeName: ControlsSettingsController, Assembly-CSharp
+        m_MethodName: SetInvertMouse
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
